@@ -9,7 +9,7 @@ class MyList
   end
 
   def each(&block)
-    @list.each(&block)
+    MyEnumerable.each(@list, &block)
   end
 end
 

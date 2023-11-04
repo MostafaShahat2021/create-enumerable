@@ -1,4 +1,8 @@
 module MyEnumerable
+  def self.each(collection, &block)
+    collection.each(&block)
+  end
+  
   def all?(&block)
     each { |element| return false unless block.call(element) }
     true
